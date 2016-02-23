@@ -1,0 +1,15 @@
+adapter: mysql
+
+database:
+    name:     test
+    user:     test
+    password: test
+    port:     1234
+    host:     localhost
+
+s3:
+    bucket: backups
+    region: us-east-1
+    access_key: 122223dsfgadg
+    secret: 122223dsfgadg
+    path: data_backup/
