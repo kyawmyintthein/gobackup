@@ -1,0 +1,32 @@
+{
+	"ImportPath": "gobackup",
+	"GoVersion": "go1.5",
+	"Deps": [
+		{
+			"ImportPath": "github.com/codegangsta/cli",
+			"Comment": "1.2.0-139-g142e6cd",
+			"Rev": "142e6cd241a4dfbf7f07a018f1f8225180018da4"
+		},
+		{
+			"ImportPath": "github.com/goamz/goamz/aws",
+			"Rev": "7c9a0dfe202af99a0a99ba82cf094af8f5be51c7"
+		},
+		{
+			"ImportPath": "github.com/goamz/goamz/s3",
+			"Rev": "7c9a0dfe202af99a0a99ba82cf094af8f5be51c7"
+		},
+		{
+			"ImportPath": "github.com/kyawmyintthein/barkup",
+			"Comment": "1.0-4-g667c51d",
+			"Rev": "667c51d849397b0f7d4d69dfef6f9cfc8c849805"
+		},
+		{
+			"ImportPath": "github.com/vaughan0/go-ini",
+			"Rev": "a98ad7ee00ec53921f08832bc06ecf7fd600e6a1"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v1",
+			"Rev": "9f9df34309c04878acc86042b16630b0f696e1de"
+		}
+	]
+}
