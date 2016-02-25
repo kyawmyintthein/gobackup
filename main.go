@@ -173,8 +173,28 @@ func (config *Config) exportPostgreDatabase() (bool, error) {
 }
 
 func (config *Config) exportMongodbDatabase() (bool, error) {
-	log.Println("Export mongodb")
-	return true, nil
+       // Configure a Mongodb exporter
+        mongodb := &barkup.Mongodb{
+          Host: config.Database.Host,
+          Password: config.Database.Password, 
+          Port:     config.Database.Port,
+          DB:       config.Database.Name,
+          User:     config.Database.User,
+	}
+
+	       
+	s3 := &barkup.S3{
+		Region:       config.S3.Region,
+		Bucket:       config.S3.Bucket,
+		AccessKey:    config.S3.AccessKey,
+		ClientSecret: config.S3.ClientSecret,
+        }
+
+     err := mongodb.DumpDatabase().To(config.S3.Path, s3)
+     if err != nil {
+    	return false,err
+     }
+     return true, nil
 }
 
 func (adapter Adapter) String() string {
